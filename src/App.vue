@@ -2,8 +2,9 @@
 
 <div >
     <Main />
-    <router-view />
+    
 </div>
+<router-view />
 
 </template>
 
@@ -16,15 +17,6 @@ import Main from '@/views/Main.vue'
 
 export default {
     name: "App",
-    data() {
-        return {
-            
-        };
-    },
-    mounted() {
-       
-    },
-
     components: {
         Main,
        

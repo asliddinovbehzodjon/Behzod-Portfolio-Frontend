@@ -368,7 +368,6 @@ export default {
 </script>
 
 <style scoped>
-@import '../../node_modules/bulma';
 @import '../assets/css/style.css';
 
 
