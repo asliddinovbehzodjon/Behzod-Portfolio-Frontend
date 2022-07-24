@@ -85,8 +85,8 @@
             </div>
 
             <div class="box">
-                <span>4+</span>
-                <h3>mukofotlar</h3>
+                <span>{{number}}+</span>
+                <h3>Saytga tashrif buyurganlar</h3>
             </div>
 
         </div>
@@ -261,7 +261,8 @@ export default {
                 profession:'',
                 language:'',
                 image:'',
-                cv:''
+                cv:'',
+                number:'',
             },
             link:{
                 telegram:'',
@@ -285,6 +286,9 @@ export default {
     },
     methods:{
        async SendMe(){
+              await axios.get(`${this.url}/visitor`).then(res => {
+                this.number = res.data.visitors
+              })
               await axios.post(`${this.url}/sendtelegram/${this.name}/${this.email}/${this.message}/`).then(res =>{
                 toast({
                     pauseOnHover:true,
