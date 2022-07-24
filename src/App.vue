@@ -2,9 +2,9 @@
 
 <div >
     <Main />
-    
+    <router-view :key="$route.fullPath" />
 </div>
-<router-view />
+
 
 </template>
 
