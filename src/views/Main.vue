@@ -262,7 +262,7 @@ export default {
                 language:'',
                 image:'',
                 cv:'',
-                number:'',
+                
             },
             link:{
                 telegram:'',
@@ -281,14 +281,13 @@ export default {
             name:'',
             email:'',
             message:'',
+            number:'',
 
         }
     },
     methods:{
        async SendMe(){
-              await axios.get(`${this.url}/visitor`).then(res => {
-                this.number = res.data.visitors
-              })
+             
               await axios.post(`${this.url}/sendtelegram/${this.name}/${this.email}/${this.message}/`).then(res =>{
                 toast({
                     pauseOnHover:true,
@@ -348,6 +347,10 @@ export default {
         },
 
         async getme(){
+            await axios.get(`https://portfoliouz.pythonanywhere.com/api/v1/visitor`).then(res => {
+                this.number = res.data.visitors
+                
+              })
             await axios.get(`${this.url}/me/`).then(res => {
                 this.me = res.data[0]
                
