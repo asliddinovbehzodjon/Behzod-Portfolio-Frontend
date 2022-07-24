@@ -174,11 +174,6 @@ III.Frontend Framewrok: Javascript,Vuejs</p>
 
     <div class="box-container">
 
-        
-
-       
-
-       
       
       <div class="box" v-for="portfolio in portfolios" :key="portfolio.id">
         <img :src="portfolio.image" alt="">
@@ -249,7 +244,7 @@ III.Frontend Framewrok: Javascript,Vuejs</p>
 </template>
 
 <script>
-import {toast} from 'bulma-toast'
+import { toast } from 'bulma-toast'
 import axios from 'axios'
 export default {
     name: 'Main',
@@ -291,14 +286,15 @@ export default {
     methods:{
        async SendMe(){
               await axios.post(`${this.url}/sendtelegram/${this.name}/${this.email}/${this.message}/`).then(res =>{
-                 toast({
-                    message: 'Xabar yuborildi',
-                    duration: 3000,
-                    pauseOnHover: true,
-                    dismissible: true,
-                    position: 'bottom-right',
-                    type: "is-warning"
-
+                toast({
+                    pauseOnHover:true,
+                    message:'Xabar yuborildi',
+                    position:'bottom-right',
+                    duration:2000,
+                    dismissible:true,
+                    type:'is-light',
+                    extraClasses:'btoast'
+                    
                 })
                 this.name=''
                 this.email=''
@@ -372,6 +368,7 @@ export default {
 </script>
 
 <style scoped>
+@import '../../node_modules/bulma';
 @import '../assets/css/style.css';
 
 

@@ -1,21 +1,34 @@
 <template>
-<div>
- <Main />
+
+<div >
+    <Main />
+    <router-view />
 </div>
-<router-view />
+
 </template>
 
 <style lang="scss">
 </style>
 
 <script>
+
 import Main from '@/views/Main.vue'
 
 export default {
-    name: 'App',
+    name: "App",
+    data() {
+        return {
+            
+        };
+    },
+    mounted() {
+       
+    },
+
     components: {
-    Main,
-   
-}
+        Main,
+       
+
+    }
 }
 </script>

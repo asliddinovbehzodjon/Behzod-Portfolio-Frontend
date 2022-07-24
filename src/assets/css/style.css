@@ -281,16 +281,17 @@ header .navbar ul li a:hover{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding:2rem 0;
+    padding:3rem 0;
 }
 
 .portfolio .box-container .box{
     height: 20rem;
     width:26rem;
-    border-radius: 1rem;
+    border-radius: 2rem;
     margin:2rem;
     overflow: hidden;
     cursor: pointer;
+    box-shadow: 5px 0px 15px #f9ca24;
 }
 
 .portfolio .box-container .box img{
@@ -388,6 +389,7 @@ header .navbar ul li a:hover{
 
 
 
+
 /* media queries  */
 
 @media (max-width:1200px){
@@ -425,9 +427,11 @@ header .navbar ul li a:hover{
 @media (max-width:768px){
 
     html{
-        font-size: 50%;
+        font-size: 43%;
     }
- 
+    
+    
+   
  }
 
 @media (max-width:400px){
@@ -456,7 +460,8 @@ header .navbar ul li a:hover{
         margin:3rem 0;
     }
 
- }.portfolio .box-container{
+ }
+ .portfolio .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
     gap:2rem;
@@ -464,11 +469,13 @@ header .navbar ul li a:hover{
 
 .portfolio .box-container .box{
     height: 25rem;
-    border-radius: .5rem;
+    border-radius: 2rem;
     overflow:hidden;
     box-shadow: var(--box-shadow);
     position: relative;
     border:1rem solid transparent;
+    box-shadow: 5px 0 15px #f9ca24;
+
 }
 
 .portfolio .box-container .box img{
@@ -544,8 +551,8 @@ header .navbar ul li a:hover{
     background-color: #f9ca24;
     float: left;
     font-weight: bold;
-    font-size: 20px;
-    padding: 18px 20px;
+    font-size: 18px;
+    padding: 15px 18px;
     text-decoration: none;
     transition: background-color .3s;
     border: 2px solid #ddd;
@@ -562,4 +569,15 @@ header .navbar ul li a:hover{
 .ptitle{
     color:#f9ca24 ;
     font-size: 15px;
+}
+.btoast{
+    background: #f9ca24;
+    color: #fff;
+    font-size: 15px;
+    padding: 25px;
+
+}
+
+.box {
+    box-shadow: 5px 0 15px #f9ca24;
 }
